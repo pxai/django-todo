@@ -14,7 +14,7 @@ source django-adboard/bin/activate
 
 Exit
 ```shell
-a 
+deactivate
 ```
 
 # Set up Django
@@ -25,6 +25,7 @@ https://docs.djangoproject.com/en/4.1/intro/tutorial01/
 Install stuff with:
 ```shell
  pip3 install Django~=4.1.0
+ pip3 install coverage==3.6
 ```
 
 Create a project
@@ -83,6 +84,32 @@ Run it!!!
 
 ```shell
 python manage.py migrate
+```
+
+## Testing
+
+```shell
+python manage.py test
+```
+
+Run coverage
+```shell
+coverage run manage.py test whatever -v 2
+```
+
+### Create fixtures
+
+```shell
+python manage.py dumpdata todoapp.Todo --pk 1 --indent 4 >> fixtures.json
+```
+
+```shell
+python manage.py loaddata group.json
+```
+
+or in the test file
+```python
+    fixtures = ["group.json"]
 ```
 
 ## Query Sets

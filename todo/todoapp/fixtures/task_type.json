@@ -1,0 +1,26 @@
+[
+{
+    "model": "todoapp.tasktype",
+    "pk": 1,
+    "fields": {
+        "name": "Todo",
+        "description": "Not done yet"
+    }
+},
+{
+    "model": "todoapp.tasktype",
+    "pk": 2,
+    "fields": {
+        "name": "Important",
+        "description": "Super important"
+    }
+},
+{
+    "model": "todoapp.tasktype",
+    "pk": 4,
+    "fields": {
+        "name": "Doing",
+        "description": "In progress"
+    }
+}
+]
