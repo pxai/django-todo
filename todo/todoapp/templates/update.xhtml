@@ -1,0 +1,9 @@
+<div id="root">
+    {{ _("update_template") }}
+
+    <form action="/todos/update/{{todo.id}}" method="post">
+        {{ form }}
+        <input type="submit" value="UPDATE">
+        {% csrf_token %}
+    </form>
+</div>

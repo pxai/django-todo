@@ -1,0 +1,21 @@
+{% load i18n %} 
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+   <link href="/static/style.css" rel="stylesheet">
+   <link rel="stylesheet" href="{% static 'css/todoapp.css' %}"  >
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {% include "header.xhtml" %}
+    {% include template_name %}
+    {% include "footer.xhtml" %}
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<div id="root">
+    Hello There, from a template
+
+    <form action="/todos" method="post">
+        {{ form }}
+        <input type="submit" value="CREATE">
+        {% csrf_token %}
+    </form>
+    <table>
+    <tr><th>Id</th><th>{{ _("task") }}</th><th>{{ _("active") }}</th><th>{{ _("status") }}</th><th>Created at</th><th>Modified at</th><th></th><th></th></tr>
+    {% for todo in todos %}
+        <tr>
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.task }}</td>
+            <td>{{ todo.active }}</td>
+            <td>{{ todo.status }}</td>
+            <td>{{ todo.created_at }}</td>
+            <td>{{ todo.modified_at }}</td>
+            <td><a href="{% url 'update_todo' id=todo.id %}">Update</a></td>
+            <td><a href="/todos/delete/{{ todo.id }}">Del</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
