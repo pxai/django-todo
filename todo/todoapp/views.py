@@ -115,6 +115,15 @@ class TaskTypeList(ListView):
 class TaskTypeDetail(DetailView):
     model = TaskType
     template_name = "task_type_detail.xhtml" 
+    context_object_name = 'task_type'   # your own name for the list as a template variable
+    ## queryset = Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+    # override context data
+    def get_context_data(self, *args, **kwargs):
+        context = super(TaskTypeDetail,
+             self).get_context_data(*args, **kwargs)
+        # add extra field
+        context["other"] = "Other data"   
+        return context
 
 class TaskTypeCreation(CreateView):
     model = TaskType
