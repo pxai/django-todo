@@ -1,4 +1,5 @@
 # Django 4 Todo
+
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/pxai/django-todo/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/pxai/django-todo/tree/master)
 
 # Setup venv
