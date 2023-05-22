@@ -1,4 +1,5 @@
-# Django-Adboard
+# Django 4 Todo
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/pxai/django-todo/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/pxai/django-todo/tree/master)
 
 # Setup venv
 
@@ -62,6 +63,9 @@ Remove `adboardapp/tests.py` to avoid errors.
 ```shell
 python manage.py test --noinput animals.tests
 ```
+
+Assert reference
+https://docs.python.org/3/library/unittest.html#assert-methods
 
 ## DB
 
